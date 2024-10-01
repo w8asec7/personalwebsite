@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.navbar {
+    background-color: #5c4d99;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0f0f0;
+}
+
+.about-me {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-me h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-section .text {
+    flex: 1;
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    word-wrap: break-word;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.content-section .image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.interests-hobbies {
+    background-color: #eaeaea;
+    padding: 60px 20px;
+}
+
+.interests-hobbies h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.interests-hobbies .content-section {
+    flex-direction: row-reverse;
+}
+
+.interests-hobbies .text {
+    flex: 2;
+    padding: 20px;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.interests-hobbies .image {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .content-section,
+    .interests-hobbies .content-section {
+        flex-direction: column;
+    }
+
+    .content-section .image,
+    .interests-hobbies .image {
+        margin: 20px 0;
+    }
+}
