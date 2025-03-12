@@ -435,3 +435,93 @@ h2 {
     margin-bottom: 1.5rem; /* Changed from 3rem to 1.5rem */
     grid-column: 1 / -1;
 }
+
+/* Improved Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .sticky-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .sticky-nav a {
+        margin: 0.3rem;
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .content-section {
+        padding: 3rem 1rem;
+    }
+    
+    .content-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .project-item, .education-item {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    .image-content img, 
+    .skill-image img {
+        height: auto;
+        max-height: 250px;
+    }
+    
+    #about .image-content img {
+        height: auto;
+        max-height: 300px;
+    }
+    
+    .large-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .sticky-nav {
+        padding: 0.5rem 0;
+        overflow-x: auto;
+        justify-content: start;
+    }
+    
+    .sticky-nav::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .project-item, .education-item {
+        padding: 1.25rem;
+        margin: 1rem 0;
+    }
+    
+    li {
+        padding: 0.8rem;
+    }
+    
+    .scroll-indicator {
+        font-size: 1.8rem;
+    }
+}
