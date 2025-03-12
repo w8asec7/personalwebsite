@@ -2,55 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishi's Personal Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rishi Nigam | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="work_experience.html">Work Experience</a></li>
-            <li><a href="non_profit.html">Non-Profit Work</a></li>
-            <li><a href="clubs_activities.html">Clubs and Activities</a></li>
-            <li><a href="personal_projects.html">Personal Projects</a></li>
-            <li><a href="volunteer_experience.html">Volunteer Experience</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="questions.html">Questions</a></li>
-        </ul>
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>RISHI NIGAM</h1>
+            <p class="subtitle">Aspiring Computer Scientist & Innovator</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </header>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <a href="#about">About</a>
+        <a href="#work-experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Main Content: About Me Section -->
-    <main>
-        <section class="about-me">
-            <h1>About Me</h1>
-            <div class="content-section">
-                <div class="text">
-                    <p>My name is Rishi Nigam, and I am a student at Allen High School. In my free time, I love to program, play basketball, and solve math problems. I have a particular passion for programming, computer science, engineering, physics, and calculus, as they allow me to explore and understand the world around me. Furthermore, I referee soccer on the weekends when I can to help my community. I have a loving family, including my brother, Ved, my dad, Gopaljee, and my mom, Vinita.</p>
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>About Me</h2>
+                <p class="large-text">Hi, I'm Rishi! I'm passionate about Computer Science, AI, and VR development. I love building applications that solve real-world problems through innovative technological solutions. With experience in both software development and immersive technologies, I strive to create impactful digital experiences.</p>
+            </div>
+            <div class="image-content">
+                <img src="PPP.JPG" alt="Rishi Nigam Profile">
+            </div>
+        </div>
+    </section>
+        <!-- Education Section -->
+            <!-- Education Section -->
+    <section id="education" class="content-section">
+        <div class="content-wrapper">
+            <h2>Education</h2>
+            
+            <!-- Allen High School -->
+            <div class="education-item">
+                <div class="text-content">
+                    <h3>Allen High School</h3>
+                    <p class="large-text">
+                        2021-2025 | Allen, TX<br>
+                        Rank: 60/1637<br>
+                        GPA (Weighted): 4.5085/5.0<br>
+                        GPA (Unweighted): 3.98/4.0<br>
+                        Graduation: May 2025
+                    </p>
                 </div>
-                <div class="image">
-                    <img src="images/your_picture.jpg" alt="Your Picture" class="main-image">
+                <div class="image-content">
+                    <img src="Pallen.jpeg" alt="Allen High School Campus">
                 </div>
             </div>
-        </section>
 
-        <!-- Interests and Hobbies Section -->
-        <section class="interests-hobbies">
-            <h2>Interests and Hobbies</h2>
-            <div class="content-section">
-                <div class="text">
-                    <p>Placeholder text for hobbies such as basketball, programming, and solving math problems.</p>
+            <!-- UT Austin -->
+            <div class="education-item">
+                <div class="text-content">
+                    <h3>University of Texas at Austin</h3>
+                    <p class="large-text">
+                        Future Longhorn!<br>
+                        Computer Science (Starting Fall 2025)<br>
+                        Aspiring AI & VR Researcher
+                    </p>
                 </div>
-                <div class="image">
-                    <img src="images/hobbies.jpg" alt="Hobbies Image" class="main-image">
+                <div class="image-content">
+                    <img src="PAustin.avif" alt="UT Austin Campus">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Additional sections can be added here -->
-    </main>
+    <!-- Work Experience Section -->
+    <section id="work-experience" class="content-section">
+        <div class="content-wrapper">
+            <h2>Work Experience</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-item">
+                <div class="text-content">
+                    <h3>Navigation App (Eagle Maps)</h3>
+                    <p class="large-text">Designed a unique UI that helps students find their classes and track teacher availability. Implemented real-time tracking and optimized campus navigation routes using React Native and Firebase backend.</p>
+                </div>
+                <div class="image-content">
+                    <img src="PealMap.jpeg" alt="Eagle Maps Project">
+                </div>
+            </div>
 
-    <script src="js/script.js"></script>
+            <!-- Project 2 -->
+            <div class="project-item">
+                <div class="text-content">
+                    <h3>VR Firefighter Training</h3>
+                    <p class="large-text">Developed a VR simulation in Unity using C# to train firefighters in CPR scenarios. Created realistic physics interactions and multiplayer capabilities for team training exercises.</p>
+                </div>
+                <div class="image-content">
+                    <img src="IMG_0394.jpg" alt="VR Firefighter Training">
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <div class="text-content">
+                    <h3>Soccer Refereeing</h3>
+                    <p class="large-text">Officiated 50+ competitive soccer matches, developing strong leadership and conflict resolution skills. Managed game logistics and enforced FIFA regulations while maintaining player safety.</p>
+                </div>
+                <div class="image-content">
+                    <img src="PSoccer.jpeg" alt="Soccer Refereeing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" class="content-section">
+    <div class="content-wrapper">
+        <h2>Skills</h2>
+        
+        <!-- Technical Skills Row -->
+        <div class="skill-row">
+            <div class="skill-text">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>C# • Python • React Native • Unity</li>
+                    <li>Firebase • GitHub • AI Development</li>
+                    <li>VR Development • UI/UX Design</li>
+                </ul>
+            </div>
+            <div class="skill-image">
+                <img src="PReactT.png" alt="Technical Skills Visualization">
+            </div>
+        </div>
+
+        <!-- Professional Skills Row -->
+        <div class="skill-row">
+            <div class="skill-text">
+                <h3>Professional Skills</h3>
+                <ul>
+                    <li>Problem Solving & Critical Thinking</li>
+                    <li>Team Leadership & Collaboration</li>
+                    <li>Project Management & Agile Development</li>
+                </ul>
+            </div>
+            <div class="skill-image">
+                <img src="Ppeopleworing.png" alt="Professional Skills Visualization">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Contact Me</h2>
+                <div class="large-text">
+                    <p>Interested in collaborating or learning more? Let's connect!</p>
+                    <div class="contact-info">
+                        <p>📞 Phone: <a href="tel:+1-469-631-3604">+1-469-631-3604</a></p>
+                        <p>📧 Email: <a href="mailto:rishi.nigam4912@gmail.com">rishi.nigam4912@gmail.com</a></p>
+                        <p>💼 <a class="platform-link" href="https://www.linkedin.com/in/rishi-nigam-21bb80293/" target="_blank">LinkedIn</a></p>
+                        <p>🐱 <a class="platform-link" href="https://github.com/w8asec7" target="_blank">GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="large-text">Thank you for visiting!</p>
+        <p class="copyright">© 2023 Rishi Nigam. All rights reserved.</p>
+    </footer>
 </body>
 </html>
