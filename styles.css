@@ -347,6 +347,25 @@ p {
     margin: 0.5rem 0 0;
 }
 
+.card-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1.2rem;
+    padding: 0.35rem 1.1rem;
+    border: 1px solid var(--accent-soft);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.card-link:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 18px var(--accent-faint);
+}
+
 /* ---------- Experience timeline ---------- */
 
 .timeline {
@@ -413,6 +432,15 @@ p {
 
 .project-card .card-meta {
     margin: 0.4rem 0 1rem;
+}
+
+/* pin link buttons to the bottom so they align across cards */
+.project-card .card-link {
+    margin-top: auto;
+}
+
+.project-card p:not(.card-meta):not(.card-dates) {
+    margin-bottom: 1.2rem;
 }
 
 /* ---------- Skills ---------- */
