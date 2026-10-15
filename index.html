@@ -3,253 +3,506 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishi Nigam | Portfolio</title>
+    <title>Rishi Nigam | Case File</title>
+    <meta name="description" content="Rishi Nigam: CS student at UT Austin, founder of EduPath LLC, and developer who follows every bug to its source.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Intro: the case opens in a terminal -->
+    <div class="intro" id="intro" aria-hidden="true">
+        <div class="intro-terminal">
+            <div class="term-bar"><span></span><span></span><span></span><em>~/cases/open</em></div>
+            <pre class="term-body" id="term-body"></pre>
+        </div>
+        <p class="intro-skip">click anywhere to skip</p>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
-        <a href="#home" class="nav-logo">RN</a>
+        <a href="#home" class="nav-logo"><span class="nav-case">CASE</span> #0x524E</a>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#dossier"><span>01</span> Dossier</a>
+            <a href="#timeline"><span>02</span> Timeline</a>
+            <a href="#cases"><span>03</span> Cases</a>
+            <a href="#toolkit"><span>04</span> Toolkit</a>
+            <a href="#contact"><span>05</span> Contact</a>
         </div>
+        <div class="nav-progress" aria-hidden="true"><span id="progress"></span></div>
     </nav>
 
     <!-- Hero -->
     <header id="home" class="hero">
         <div class="hero-grid">
             <div class="hero-content">
-                <p class="hero-eyebrow">Austin, TX</p>
-                <h1>Rishi <span class="accent">Nigam</span></h1>
-                <p class="hero-subtitle">I'm a computer science student at UT Austin who loves solving problems for people. Whether it's helping students find their classes or training firefighters in VR, I build things that actually get used.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="#projects">View Projects</a>
-                    <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+                <p class="hero-eyebrow reveal">Open investigation &middot; Austin, TX</p>
+                <h1 class="reveal">Rishi <span class="accent">Nigam</span></h1>
+                <p class="hero-catch reveal" aria-live="polite">
+                    <span class="prompt">&gt;</span> <span id="catchphrase">I don't read minds. I read stack traces.</span><span class="caret" aria-hidden="true"></span>
+                </p>
+                <p class="hero-subtitle reveal">I'm a computer science student at UT Austin who loves solving problems for people. Whether it's helping students find their classes or training firefighters in VR, I build things that actually get used.</p>
+                <div class="hero-actions reveal">
+                    <a class="btn btn-primary" href="#cases">Review the Evidence</a>
+                    <a class="btn btn-ghost" href="#contact">Report a Bug</a>
                 </div>
             </div>
-            <div class="hero-photo">
-                <img src="profile.jpg" alt="Rishi Nigam in front of the Austin skyline">
+
+            <div class="hero-board">
+                <svg class="hero-string" aria-hidden="true">
+                    <path class="rope" id="hero-rope-a" pathLength="1" />
+                    <path class="rope" id="hero-rope-b" pathLength="1" />
+                </svg>
+                <span class="pin pin-hero" data-pin aria-hidden="true"></span>
+                <figure class="polaroid">
+                    <span class="tape" aria-hidden="true"></span>
+                    <img src="profile.jpg" alt="Rishi Nigam in front of the Austin skyline">
+                    <figcaption>Subject: R. Nigam</figcaption>
+                </figure>
+                <div class="sticky sticky-a">
+                    <span class="pin" data-pin aria-hidden="true"></span>
+                    last seen:<br>shipping to prod
+                </div>
+                <div class="sticky sticky-b">
+                    <span class="pin" data-pin aria-hidden="true"></span>
+                    motive:<br>&ldquo;make it useful&rdquo;
+                </div>
             </div>
         </div>
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">&darr;</a>
+        <a href="#dossier" class="scroll-indicator" aria-label="Scroll down">
+            <span>follow the trail</span>&darr;
+        </a>
     </header>
 
     <main>
 
-        <!-- About -->
-        <section id="about" class="section">
+        <!-- Dossier (About + Education) -->
+        <section id="dossier" class="section dossier">
             <div class="wrapper">
-                <h2><span class="section-number">01</span> About</h2>
-                <div class="about-text">
-                    <p>Hi, I'm Rishi. I study computer science at UT Austin and run EduPath LLC, a company I founded to bring indoor navigation to schools. My work spans mobile development, pathfinding algorithms, VR simulation, and machine learning.</p>
-                    <p>I like problems that sit between software and the real world: converting building blueprints into routable graphs, simulating financial shocks, and training firefighters in virtual reality. Outside of code, I referee competitive soccer and keep swim meet timing hardware running at UT.</p>
+                <header class="section-head reveal">
+                    <p class="kicker">// 01 &mdash; The Dossier</p>
+                    <h2>Subject: <em>Rishi Nigam</em></h2>
+                    <p class="lede">An interesting case. Keep scrolling&hellip; the file opens.</p>
+                </header>
+
+                <div class="folder" id="folder">
+                    <div class="folder-tab">Personnel profile &mdash; R. Nigam</div>
+                    <div class="folder-inner">
+                        <article class="sheet sheet-record" aria-label="Personnel record">
+                            <span class="staple" aria-hidden="true"></span>
+                            <dl class="record">
+                                <div><dt>Name</dt><dd>Rishi Nigam</dd></div>
+                                <div><dt>Handle</dt><dd>@w8asec7</dd></div>
+                                <div><dt>Location</dt><dd>Austin, TX</dd></div>
+                                <div><dt>Occupation</dt><dd>CS student &middot; Founder, EduPath LLC &middot; Software engineering intern</dd></div>
+                                <div><dt>Education</dt><dd>University of Texas at Austin<br>BS Computer Science &middot; GPA 3.73<br><span class="muted">Aug 2025 to May 2028</span></dd></div>
+                                <div><dt>Coursework</dt><dd>Data Structures, Discrete Math, Calculus 2 and 3, Probability, Computer Architecture</dd></div>
+                                <div><dt>Prior cases</dt><dd>Soccer referee &middot; Swim meet pool technician</dd></div>
+                                <div><dt>Known weakness</dt><dd>Cannot leave a bug unsolved</dd></div>
+                            </dl>
+                        </article>
+
+                        <article class="sheet sheet-statement" aria-label="Statement of the subject">
+                            <p class="statement-label">Statement of the subject</p>
+                            <p class="statement">Hi, I'm Rishi. I study computer science at UT Austin and run EduPath LLC, a company I founded to bring <span class="circled">indoor navigation<svg viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M8 22C6 10 40 4 66 5C96 6 116 12 114 22C112 34 76 37 52 36C26 35 6 30 10 17C12 11 22 8 30 7"/></svg></span> to schools. My work spans mobile development, pathfinding algorithms, VR simulation, and machine learning.</p>
+                            <p class="statement">I like problems that sit between software and <span class="circled">the real world<svg viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M8 22C6 10 40 4 66 5C96 6 116 12 114 22C112 34 76 37 52 36C26 35 6 30 10 17C12 11 22 8 30 7"/></svg></span>: converting building blueprints into routable graphs, simulating financial shocks, and training firefighters in virtual reality.</p>
+                            <p class="margin-note">note: he builds things people actually use. Underline that. It explains everything that follows.</p>
+                        </article>
+
+                        <div class="folder-cover" aria-hidden="true">
+                            <div class="cover-label">
+                                <span class="cover-small">Case file</span>
+                                <span class="cover-name">Rishi Nigam</span>
+                                <span class="cover-small">N&ordm; 0x524E &middot; Austin, TX</span>
+                            </div>
+                            <span class="cover-stamp">Classified</span>
+                            <span class="cover-hint">keep scrolling, it opens &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="observations">
+                    <li class="obs reveal">
+                        <span class="obs-no">Observation N&ordm; 01</span>
+                        <p class="obs-title">Builds for real users.</p>
+                        <p class="obs-evidence">His navigation app was contracted by Allen High School. Students actually use it to find their classes.</p>
+                    </li>
+                    <li class="obs reveal">
+                        <span class="obs-no">Observation N&ordm; 02</span>
+                        <p class="obs-title">Bridges code and hardware.</p>
+                        <p class="obs-evidence">Blueprints into graphs, firefighters into VR, and a soldering iron for the swim meet timing system.</p>
+                    </li>
+                    <li class="obs reveal">
+                        <span class="obs-no">Observation N&ordm; 03</span>
+                        <p class="obs-title">Explains it twice, patiently.</p>
+                        <p class="obs-evidence">Teaching assistant for about 200 first-time Python programmers in CS 303E.</p>
+                    </li>
+                    <li class="obs reveal">
+                        <span class="obs-no">Observation N&ordm; 04</span>
+                        <p class="obs-title">Calm under pressure.</p>
+                        <p class="obs-evidence">Over 100 competitive soccer matches refereed. Merge conflicts are nothing.</p>
+                    </li>
+                </ol>
+
+                <div class="verdict" id="verdict">
+                    <p class="verdict-text">
+                        <span class="kicker">Conclusion</span>
+                        The evidence suggests <em>a developer.</em>
+                    </p>
+                    <span class="verdict-stamp" aria-hidden="true">Verified</span>
                 </div>
             </div>
         </section>
 
-        <!-- Education -->
-        <section id="education" class="section">
+        <!-- Timeline (Experience) -->
+        <section id="timeline" class="section timeline-section">
             <div class="wrapper">
-                <h2><span class="section-number">02</span> Education</h2>
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>University of Texas at Austin</h3>
-                            <p class="card-meta">BS Computer Science &middot; GPA 3.73</p>
+                <header class="section-head reveal">
+                    <p class="kicker">// 02 &mdash; The Timeline</p>
+                    <h2>Witness <em>statements</em></h2>
+                    <p class="lede">Six places he's been seen. Every one of them checks out.</p>
+                </header>
+
+                <div class="timeline" id="timeline-board">
+                    <svg class="timeline-string" aria-hidden="true"><path class="rope" id="timeline-rope" pathLength="1" /></svg>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit A</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Founder and Developer</h3>
+                                <p class="card-meta">EduPath LLC &middot; McKinney, TX</p>
+                            </div>
+                            <p class="card-dates">Sep 2024 to Present</p>
                         </div>
-                        <p class="card-dates">Aug 2025 to May 2028</p>
-                    </div>
-                    <p>Relevant coursework: Data Structures, Discrete Math, Calculus 2 and 3, Probability, Computer Architecture.</p>
+                        <p>Founded a company that builds campus navigation apps for schools. Our app, contracted by Allen High School, helps students find their way with real time pathfinding across multiple floors.</p>
+                        <div class="exhibit-foot">
+                            <span class="stamp stamp-open">Active</span>
+                            <a class="card-link" href="https://drive.google.com/file/d/18OhC0-kpRXjwGhQV396cImN3pblTH5kd/view?usp=drive_link" target="_blank" rel="noopener">Watch Demo &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit B</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Software Engineering Intern</h3>
+                                <p class="card-meta">Access Scout (Momentum at UT Austin) &middot; Austin, TX</p>
+                            </div>
+                            <p class="card-dates">Sep 2026 to Present</p>
+                        </div>
+                        <p>Build iOS, Android, and web apps with a team of five interns using React Native, Expo, TypeScript, and Firebase. Developed personalized matching across 13 accessibility attributes, editable profiles, and tools for building owners to publish information, with live updates and community confirmations supporting adoption discussions with over 10 organizations.</p>
+                        <div class="exhibit-foot"><span class="stamp stamp-open">Active</span></div>
+                    </article>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit C</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Undergraduate Teaching Assistant</h3>
+                                <p class="card-meta">University of Texas at Austin &middot; Austin, TX</p>
+                            </div>
+                            <p class="card-dates">Aug 2026 to Present</p>
+                        </div>
+                        <p>Teach CS 303E, UT Austin&rsquo;s introductory Python course: support about 200 students in class, grade around 100 programming assignments each week, and hold office hours and labs to help first-time programmers build solid fundamentals.</p>
+                        <div class="exhibit-foot"><span class="stamp stamp-open">Active</span></div>
+                    </article>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit D</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Pool Technician</h3>
+                                <p class="card-meta">University of Texas at Austin &middot; Austin, TX</p>
+                            </div>
+                            <p class="card-dates">Feb 2026 to Aug 2026</p>
+                        </div>
+                        <p>Kept the timing hardware behind UT Austin swim meets alive. Diagnosed electronics, repaired sensors, and soldered wiring so competitions ran without a hitch.</p>
+                        <div class="exhibit-foot"><span class="stamp stamp-closed">Closed</span></div>
+                    </article>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit E</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Software Development Intern</h3>
+                                <p class="card-meta">University of Texas at Dallas &middot; Richardson, TX</p>
+                            </div>
+                            <p class="card-dates">Jun 2024 to Aug 2024</p>
+                        </div>
+                        <p>Built a VR firefighter training and CPR simulation in Unity for the Oculus Quest 2, complete with hand tracking, realistic tool handling, and live performance scoring.</p>
+                        <div class="exhibit-foot"><span class="stamp stamp-closed">Closed</span></div>
+                    </article>
+
+                    <article class="exhibit reveal">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="exhibit-label">Exhibit F</p>
+                        <div class="card-header">
+                            <div>
+                                <h3>Soccer Referee</h3>
+                                <p class="card-meta">US Soccer Grassroots &middot; Dallas Area</p>
+                            </div>
+                            <p class="card-dates">2022 to Aug 2024</p>
+                        </div>
+                        <p>Officiated over 100 competitive matches, making quick calls under pressure and keeping games safe and fair for everyone on the field.</p>
+                        <div class="exhibit-foot"><span class="stamp stamp-closed">Closed</span></div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Experience -->
-        <section id="experience" class="section">
+        <!-- Evidence board (Projects) -->
+        <section id="cases" class="section cases">
+            <div class="board-light" aria-hidden="true"></div>
             <div class="wrapper">
-                <h2><span class="section-number">03</span> Experience</h2>
+                <header class="section-head reveal">
+                    <p class="kicker">// 03 &mdash; The Evidence Board</p>
+                    <h2>Four cases. <em>One thread.</em></h2>
+                    <p class="lede">Every one of them is real. Every one of them ships.</p>
+                </header>
 
-                <div class="timeline">
+                <div class="board" id="board">
+                    <svg class="board-string" aria-hidden="true"><path class="rope" id="board-rope" pathLength="1" /></svg>
 
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>Founder and Developer</h3>
-                            <p class="card-meta">EduPath LLC &middot; McKinney, TX</p>
+                    <article class="case-card cc-1" data-whisper="A local LLM writing résumés. Even the evidence is self-aware.">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="cc-peek" aria-hidden="true"></span>
+                        <div class="cc-tab">Case N&ordm; 001</div>
+                        <div class="cc-paper">
+                            <p class="cc-codename">&ldquo;The Tailored R&eacute;sum&eacute;&rdquo;</p>
+                            <h3 class="cc-title">AI Resume &amp; Outreach Agent</h3>
+                            <p class="cc-dates">Summer 2026 to Present</p>
+                            <p class="cc-summary">A fully local agent that tailors resumes per job description using a local LLM, ranks relevant bullets and projects with embedding based relevance, and autofills applications through a Chrome extension.</p>
+                            <ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLite</li><li>Ollama</li><li>Chrome Extension</li></ul>
+                            <div class="cc-foot">
+                                <span class="stamp stamp-open">Open</span>
+                                <a class="cc-open" href="https://github.com/w8asec7/RewriteResume" target="_blank" rel="noopener">Open the case &rarr;</a>
+                            </div>
                         </div>
-                        <p class="card-dates">Sep 2024 to Present</p>
-                    </div>
-                    <p>Founded a company that builds campus navigation apps for schools. Our app, contracted by Allen High School, helps students find their way with real time pathfinding across multiple floors.</p>
-                    <a class="card-link" href="https://drive.google.com/file/d/18OhC0-kpRXjwGhQV396cImN3pblTH5kd/view?usp=drive_link" target="_blank" rel="noopener">Watch Demo &#8599;</a>
-                </div>
+                    </article>
 
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>Software Engineering Intern</h3>
-                            <p class="card-meta">Access Scout (Momentum at UT Austin) &middot; Austin, TX</p>
+                    <article class="case-card cc-2" data-whisper="Dijkstra in a high school hallway. Nobody's late on your watch.">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="cc-peek" aria-hidden="true"></span>
+                        <div class="cc-tab">Case N&ordm; 002</div>
+                        <div class="cc-paper">
+                            <p class="cc-codename">&ldquo;The Lost Freshman&rdquo;</p>
+                            <h3 class="cc-title">CustomMaps</h3>
+                            <p class="cc-dates">Spring 2025 to Present</p>
+                            <p class="cc-summary">A cross platform mobile app for multi floor indoor navigation, with turn by turn directions powered by Dijkstra pathfinding.</p>
+                            <ul class="chips"><li>React Native</li><li>Expo</li><li>Node.js</li><li>Firebase</li></ul>
+                            <div class="cc-foot">
+                                <span class="stamp stamp-open">Open</span>
+                                <a class="cc-open" href="https://github.com/w8asec7/CustomMapsDemo/blob/main/README.md" target="_blank" rel="noopener">Open the case &rarr;</a>
+                            </div>
                         </div>
-                        <p class="card-dates">Sep 2026 to Present</p>
-                    </div>
-                    <p>Build iOS, Android, and web apps with a team of five interns using React Native, Expo, TypeScript, and Firebase. Developed personalized matching across 13 accessibility attributes, editable profiles, and tools for building owners to publish information, with live updates and community confirmations supporting adoption discussions with over 10 organizations.</p>
-                </div>
+                    </article>
 
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>Software Development Intern</h3>
-                            <p class="card-meta">University of Texas at Dallas &middot; Richardson, TX</p>
+                    <article class="case-card cc-3" data-whisper="It learned to race from raw distance sensors. No crystal ball required.">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="cc-peek" aria-hidden="true"></span>
+                        <div class="cc-tab">Case N&ordm; 003</div>
+                        <div class="cc-paper">
+                            <p class="cc-codename">&ldquo;The Driver Who Wasn't There&rdquo;</p>
+                            <h3 class="cc-title">ML Racecar</h3>
+                            <p class="cc-dates">Summer 2026</p>
+                            <p class="cc-summary">Evolution strategy and reinforcement learning methods, built from scratch in NumPy, that teach a neural network to race using only raw distance sensors.</p>
+                            <ul class="chips"><li>Python</li><li>NumPy</li><li>pytest</li><li>GitHub Actions</li></ul>
+                            <div class="cc-foot">
+                                <span class="stamp stamp-closed">Closed</span>
+                                <a class="cc-open" href="https://github.com/w8asec7/ML-Racecar" target="_blank" rel="noopener">Open the case &rarr;</a>
+                            </div>
                         </div>
-                        <p class="card-dates">Jun 2024 to Aug 2024</p>
-                    </div>
-                    <p>Built a VR firefighter training and CPR simulation in Unity for the Oculus Quest 2, complete with hand tracking, realistic tool handling, and live performance scoring.</p>
-                </div>
+                    </article>
 
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>Pool Technician</h3>
-                            <p class="card-meta">University of Texas at Austin &middot; Austin, TX</p>
+                    <article class="case-card cc-4" data-whisper="You're investigating the investigation. Very meta. I like you.">
+                        <span class="pin" data-pin aria-hidden="true"></span>
+                        <span class="cc-peek" aria-hidden="true"></span>
+                        <div class="cc-tab">Case N&ordm; 004</div>
+                        <div class="cc-paper">
+                            <p class="cc-codename">&ldquo;The Recursive Website&rdquo;</p>
+                            <h3 class="cc-title">Personal Website</h3>
+                            <p class="cc-dates">2025 to Present</p>
+                            <p class="cc-summary">This site: a hand built, fully responsive case file with scroll driven folders, red thread, and no frameworks.</p>
+                            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+                            <div class="cc-foot">
+                                <span class="stamp stamp-here">You are here</span>
+                            </div>
                         </div>
-                        <p class="card-dates">Feb 2026 to Present</p>
-                    </div>
-                    <p>Keep the timing hardware behind UT Austin swim meets alive. I diagnose electronics, repair sensors, and solder wiring so competitions run without a hitch.</p>
+                    </article>
                 </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3>Soccer Referee</h3>
-                            <p class="card-meta">US Soccer Grassroots &middot; Dallas Area</p>
-                        </div>
-                        <p class="card-dates">2022 to Present</p>
-                    </div>
-                    <p>Officiated over 100 competitive matches, making quick calls under pressure and keeping games safe and fair for everyone on the field.</p>
-                </div>
-
-                </div>
-
+                <p class="board-foot">click a file to open it. the thread doesn't lie.</p>
             </div>
         </section>
 
-        <!-- Projects -->
-        <section id="projects" class="section">
+        <!-- Toolkit (Skills) -->
+        <section id="toolkit" class="section toolkit">
             <div class="wrapper">
-                <h2><span class="section-number">04</span> Projects</h2>
-                <div class="project-grid">
+                <header class="section-head toolkit-head reveal">
+                    <div>
+                        <p class="kicker">// 04 &mdash; The Toolkit</p>
+                        <h2>Instruments <em>of deduction</em></h2>
+                        <p class="lede">An impressive collection of tools. Not a single crystal ball.</p>
+                    </div>
+                    <div class="deck" id="deck" aria-hidden="true">
+                        <span class="deck-card"></span>
+                        <span class="deck-card"></span>
+                        <span class="deck-card"></span>
+                        <span class="deck-note">pick a card&hellip;</span>
+                    </div>
+                </header>
 
-                    <div class="card project-card">
-                        <div class="card-header">
-                            <h3>AI Resume &amp; Outreach Agent</h3>
-                            <p class="card-dates">Summer 2026 to Present</p>
+                <ul class="skill-grid" id="skill-grid">
+                    <li class="skill-card">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">A<i>&spades;</i></span>
+                                <span class="sk-idx br">A<i>&spades;</i></span>
+                                <p class="sk-alias">The vocabulary</p>
+                                <h3>Languages</h3>
+                                <div class="tags"><span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span></div>
+                            </div>
+                            <div class="skill-back"><span>{ }</span></div>
                         </div>
-                        <p class="card-meta">Python &middot; FastAPI &middot; SQLite &middot; Ollama &middot; Chrome Extension</p>
-                        <p>A fully local agent that tailors resumes per job description using a local LLM, ranks relevant bullets and projects with embedding based relevance, and autofills applications through a Chrome extension.</p>
-                        <a class="card-link" href="https://github.com/w8asec7/RewriteResume" target="_blank" rel="noopener">View on GitHub &#8599;</a>
-                    </div>
-
-                    <div class="card project-card">
-                        <div class="card-header">
-                            <h3>CustomMaps</h3>
-                            <p class="card-dates">Spring 2025 to Present</p>
+                    </li>
+                    <li class="skill-card red">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">K<i>&hearts;</i></span>
+                                <span class="sk-idx br">K<i>&hearts;</i></span>
+                                <p class="sk-alias">The scaffolding</p>
+                                <h3>Frameworks</h3>
+                                <div class="tags"><span>React</span><span>React Native</span><span>Node.js</span><span>Next.js</span><span>FastAPI</span><span>Jinja2</span></div>
+                            </div>
+                            <div class="skill-back"><span>&lt;/&gt;</span></div>
                         </div>
-                        <p class="card-meta">React Native &middot; Expo &middot; Node.js &middot; Firebase</p>
-                        <p>A cross platform mobile app for multi floor indoor navigation, with turn by turn directions powered by Dijkstra pathfinding.</p>
-                        <a class="card-link" href="https://github.com/w8asec7/CustomMapsDemo/blob/main/README.md" target="_blank" rel="noopener">View on GitHub &#8599;</a>
-                    </div>
-
-                    <div class="card project-card">
-                        <div class="card-header">
-                            <h3>ML Racecar</h3>
-                            <p class="card-dates">Summer 2026</p>
+                    </li>
+                    <li class="skill-card red">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">Q<i>&diams;</i></span>
+                                <span class="sk-idx br">Q<i>&diams;</i></span>
+                                <p class="sk-alias">Pattern recognition</p>
+                                <h3>ML and AI</h3>
+                                <div class="tags"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>NumPy</span><span>Reinforcement Learning</span><span>Graph Theory</span><span>Ollama</span><span>LLMs</span><span>Embeddings</span></div>
+                            </div>
+                            <div class="skill-back"><span>&nabla;</span></div>
                         </div>
-                        <p class="card-meta">Python &middot; NumPy &middot; pytest &middot; GitHub Actions</p>
-                        <p>Evolution strategy and reinforcement learning methods, built from scratch in NumPy, that teach a neural network to race using only raw distance sensors.</p>
-                        <a class="card-link" href="https://github.com/w8asec7/ML-Racecar" target="_blank" rel="noopener">View on GitHub &#8599;</a>
-                    </div>
-
-                    <div class="card project-card">
-                        <div class="card-header">
-                            <h3>Personal Website</h3>
-                            <p class="card-dates">2025 to Present</p>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">J<i>&clubs;</i></span>
+                                <span class="sk-idx br">J<i>&clubs;</i></span>
+                                <p class="sk-alias">The magnifying glass</p>
+                                <h3>Tools</h3>
+                                <div class="tags"><span>Git</span><span>Docker</span><span>Linux</span><span>SQL</span><span>RESTful APIs</span><span>pytest</span><span>GitHub Actions</span><span>GitLab CI</span></div>
+                            </div>
+                            <div class="skill-back"><span>$_</span></div>
                         </div>
-                        <p class="card-meta">HTML &middot; CSS &middot; GitHub Pages</p>
-                        <p>This site: a minimal, fully responsive portfolio with a clean design system and no frameworks.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <div class="wrapper">
-                <h2><span class="section-number">05</span> Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-group">
-                        <h3>Languages</h3>
-                        <div class="tags">
-                            <span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">10<i>&spades;</i></span>
+                                <span class="sk-idx br">10<i>&spades;</i></span>
+                                <p class="sk-alias">Above it all</p>
+                                <h3>Cloud</h3>
+                                <div class="tags"><span>AWS</span><span>Azure</span></div>
+                            </div>
+                            <div class="skill-back"><span>&#9729;</span></div>
                         </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Frameworks</h3>
-                        <div class="tags">
-                            <span>React</span><span>React Native</span><span>Node.js</span><span>Next.js</span><span>FastAPI</span><span>Jinja2</span>
+                    </li>
+                    <li class="skill-card red">
+                        <div class="skill-inner">
+                            <div class="skill-face">
+                                <span class="sk-idx tl">9<i>&hearts;</i></span>
+                                <span class="sk-idx br">9<i>&hearts;</i></span>
+                                <p class="sk-alias">The archive</p>
+                                <h3>Databases</h3>
+                                <div class="tags"><span>Firebase</span><span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span><span>SQLite</span></div>
+                            </div>
+                            <div class="skill-back"><span>&#9921;</span></div>
                         </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>ML and AI</h3>
-                        <div class="tags">
-                            <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>NumPy</span><span>Reinforcement Learning</span><span>Graph Theory</span><span>Ollama</span><span>LLMs</span><span>Embeddings</span>
-                        </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Tools</h3>
-                        <div class="tags">
-                            <span>Git</span><span>Docker</span><span>Linux</span><span>SQL</span><span>RESTful APIs</span><span>pytest</span><span>GitHub Actions</span><span>GitLab CI</span>
-                        </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Cloud</h3>
-                        <div class="tags">
-                            <span>AWS</span><span>Azure</span>
-                        </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Databases</h3>
-                        <div class="tags">
-                            <span>Firebase</span><span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span><span>SQLite</span>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="section">
+        <section id="contact" class="section contact">
             <div class="wrapper">
-                <h2><span class="section-number">06</span> Contact</h2>
-                <p class="contact-lead">Interested in working together or just want to say hi? Reach out anytime.</p>
-                <div class="contact-links">
-                    <a href="mailto:rishi.nigam4912@gmail.com">rishi.nigam4912@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/rishinigam07" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/w8asec7" target="_blank" rel="noopener">GitHub</a>
+                <header class="section-head reveal">
+                    <p class="kicker">// 05 &mdash; The Reveal</p>
+                    <h2>Shall we debug <em>something together?</em></h2>
+                </header>
+                <div class="contact-body">
+                    <div>
+                        <p class="contact-lead reveal">Interested in working together or just want to say hi? Reach out anytime. I promise not to read your mind.</p>
+                        <div class="contact-links reveal">
+                            <a href="mailto:rishi.nigam4912@gmail.com"><span>@</span> rishi.nigam4912@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/rishinigam07" target="_blank" rel="noopener"><span>in</span> LinkedIn</a>
+                            <a href="https://github.com/w8asec7" target="_blank" rel="noopener"><span>&lt;/&gt;</span> GitHub</a>
+                        </div>
+                    </div>
+                    <figure class="builder-note reveal">
+                        <span class="pin" aria-hidden="true"></span>
+                        <p class="builder-label">Statement of the suspect</p>
+                        <blockquote>&ldquo;I&rsquo;m not just a coder, I&rsquo;m a <em>builder</em>.&rdquo;</blockquote>
+                        <figcaption>&mdash; Rishi Nigam</figcaption>
+                    </figure>
                 </div>
             </div>
+        </section>
+
+        <!-- Finale -->
+        <section class="finale" id="finale" aria-label="Closing quote">
+            <span class="f-line" aria-hidden="true"></span>
+            <blockquote class="f-quote" id="f-quote">There's no such thing as magic code. Only people who read the logs.</blockquote>
+            <button class="wink" id="wink" type="button" aria-label="A winking face. Click it.">
+                <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                    <defs>
+                        <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" />
+                            <feDisplacementMap in="SourceGraphic" scale="4.5" />
+                        </filter>
+                    </defs>
+                    <g filter="url(#rough)" stroke-linecap="round" stroke-linejoin="round">
+                        <path class="w-stroke w-face" pathLength="1" d="M104 19C150 18 184 56 181 103C178 150 142 183 96 181C50 179 17 143 21 96C25 52 60 21 108 22" />
+                        <path class="w-stroke w-eye" pathLength="1" d="M72 64C69 74 69 87 73 99" />
+                        <g class="w-right">
+                            <path class="w-stroke w-eye w-eye-open" pathLength="1" d="M127 63C125 74 126 87 129 98" />
+                            <path class="w-stroke w-eye w-eye-shut" pathLength="1" d="M110 84C120 74 136 74 146 84" />
+                        </g>
+                        <path class="w-stroke w-mouth" pathLength="1" d="M53 122C70 150 128 158 152 112" />
+                    </g>
+                </svg>
+            </button>
+            <p class="f-after f-a1">The rest is just console.log().</p>
+            <p class="f-after f-a2">Case closed. <span>For now.</span></p>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Rishi Nigam. Made in Austin, TX.</p>
+        <p>&copy; 2026 Rishi Nigam. Made in Austin, TX. No bugs were harmed in the making of this case file.</p>
     </footer>
 
+    <div class="whisper" id="whisper" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
